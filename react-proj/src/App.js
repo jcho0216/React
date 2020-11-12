@@ -4,9 +4,12 @@ import './App.css'
 function App(){
   const name = '리액트';
    return (
-     <div className="react">
-       {name}
-     </div>
+     <>
+     {/*input태그를 닫아줘야함, 주석을 다는방법 참고***/}
+     <div className="react">{name}</div>
+     <input value="인풋태그" ></input> 
+  
+     </>
    );
 }
 
