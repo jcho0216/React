@@ -1,8 +1,9 @@
 import React from 'react';
-import Say from './Say';
+import Say2 from './Say2';
 
 const App = () => {
-  return <Say />
+  return <Say2 />
 };
+
 
 export default App;
