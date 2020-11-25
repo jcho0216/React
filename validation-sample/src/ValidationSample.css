@@ -1,0 +1,14 @@
+.success {
+    background-color: lightgreen;
+}
+
+.failure {
+    background-color: lightcoral;
+}
+
+#button {
+    background-color: white;
+    border-style: dotted 1px;
+    color: black;
+    margin-left: 10px;
+}
