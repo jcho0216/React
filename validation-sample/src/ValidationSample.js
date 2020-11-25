@@ -25,7 +25,7 @@ handleButtonClick = () => {
 render() {
     return (
         <div>
-            <h1>비밀번호: "0000"</h1>
+            <h2>비밀번호: "0000"</h2>
             <input type="password"
             value={this.state.password}
             onChange={this.handleChange}
