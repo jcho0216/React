@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import './WebSite';
-import WebSite from './WebSite';
+import React from 'react';
+import Iteration from './Iteration';
 
-class App extends Component {
-  render(){
-    return (
-      <WebSite />
-    )
-  }
+
+const App = () => {
+  return(
+    <Iteration />
+  );
 }
   
 
