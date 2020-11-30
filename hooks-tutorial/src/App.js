@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Counter from './Counter';
 import Info from './Info';
 
 const App = () => {
+  const [visible, setVisible] = useState(false);
   return (
     <>
-    <h2>숫자 카운트(useState)</h2>
-    <Counter /> <br/>
-
-    <h2>이름, 닉네임(useState)</h2>
-    <Info />
+    <button onClick={()=> {
+      setVisible(!visible);
+    }}>
+      {visible ? '숨기기' : '보이기'}
+    </button>
     
+    <hr />
+    {visible && <Counter />}
+    {visible && <Info />}
     </>
   );
 };

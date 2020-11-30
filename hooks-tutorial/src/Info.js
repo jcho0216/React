@@ -19,15 +19,20 @@ const Info = () => {
         setNickname(e.target.value);
     };
 
+    const inputStyle = {
+        padding: 10,
+        margin: 5,
+    };
+
     return(
         <div>
             <div>
-                <input value={name} onChange={onChangeName} />
-                <input value={nickname} onChange={onChangeNickname}/>
+                <input style={inputStyle} value={name} onChange={onChangeName} />
+                <input style={inputStyle} value={nickname} onChange={onChangeNickname}/>
             </div>
 
             <div>
-                <b>이름:</b>{name}
+                <b>이름: </b>{name}
             </div>
 
             <div>
