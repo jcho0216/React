@@ -1,27 +1,12 @@
-import React, { useState } from 'react';
-import Api from './Api';
+import React from 'react';
+import NewsList from './NewsList';
 
-export default function App() {
-  const [query, setQuery] = useState('');
-  const [pageNumber, settPageNumber] = useState('');
-
-  function handleSearch(e) {
-    setQuery(e.target.value);
-    settPageNumber(1)
-  }
-
-  Api(query, pageNumber)
+const App = () => {
   return (
-  <>
-    <input type="text" onChange={handleSearch}></input>
-    <div>Title</div>
-    <div>Title</div>
-    <div>Title</div>
-    <div>Title</div>
-    <div>Title</div>
-    <div>loading...</div>
-    <div>error</div>
-  </>
-)
-}
+    <>
+      <NewsList/>
+    </>
+  );
+};
 
+export default App;
