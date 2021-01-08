@@ -16,25 +16,36 @@ const NewsListBlock = styled.div`
     }
 `;
 
+
 const NewsList = () => {
-    const [articles, setArticles] = useState(null);
+    const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [fetching, SetFetching] = useState(false);
+
 
     useEffect(() => {
+        const infiniteScroll = () => {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const scrollTop = document.documentElement.scrollTop;
+            const clientHeight = document.documentElement.clientHeight;
+    
+            if(scrollTop + clientHeight >= scrollHeight && fetching === false) {
+                fetchData();
+            }
+        }
+        SetFetching(true);
+        window.addEventListener("scroll", infiniteScroll);
         const fetchData = async () => {
             setLoading(true);
-            try {
-                const response = await axios.get (
+            const response = await axios.get (
                     'http://newsapi.org/v2/top-headlines?country=kr&apiKey=ae20b3bd05724e9a8123bcbb6889a569',
                 );
                 setArticles(response.data.articles);
-            }catch(e) {
-                console.log(e);
-            }
             setLoading(false);
         };
         fetchData();
     }, []);
+    
     
     if(loading) {
         return <NewsListBlock>대기중...</NewsListBlock>;
