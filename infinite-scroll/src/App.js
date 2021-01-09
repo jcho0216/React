@@ -3,9 +3,7 @@ import NewsList from './NewsList';
 
 const App = () => {
   return (
-    <>
       <NewsList/>
-    </>
   );
 };
 
