@@ -7,7 +7,7 @@ const categories = [
         text: '전체보기'
     },
     {
-        name: 'buisiness',
+        name: 'business',
         text: '비즈니스'
     },
     {

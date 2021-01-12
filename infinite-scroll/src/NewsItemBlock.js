@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import React from 'react';
 
 const NewsItemBlock = styled.div`
     display: flex;
-    border-bottom: solid #eaeaea 3px;
+    border-bottom: solid #eaeaea 3px;   
     padding: 15px;
     .thumbnail {
         margin-right: 1rem;

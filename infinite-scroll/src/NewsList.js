@@ -3,7 +3,7 @@ import NewsItem from './NewsItem';
 import NewsListBlock from './NewsListBlock';
 import axios from 'axios';
 
-const NewsList = () => {
+const NewsList = ({ category }) => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(false);
     const [fetching, SetFetching] = useState(false);
@@ -20,10 +20,11 @@ const NewsList = () => {
         }
         
         window.addEventListener("scroll", infiniteScroll);
+        const query = category === 'all' ? '' : `&category=${category}`;
         const fetchData = async () => {
             setLoading(true);
             const response = await axios.get (
-                    'http://newsapi.org/v2/top-headlines?country=kr&apiKey=ae20b3bd05724e9a8123bcbb6889a569'
+                    `http://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=ae20b3bd05724e9a8123bcbb6889a569`
                 );
                 
                 setArticles(response.data.articles);
@@ -32,12 +33,13 @@ const NewsList = () => {
             setLoading(false);
         };
         fetchData();
-    }, []);
+    }, [category]);
     
     const fetchMoreData = async () => {
         SetFetching(true);
+        const query = category === 'all' ? '' : `&category=${category}`;
         const data = await axios.get (
-            'http://newsapi.org/v2/top-headlines?country=kr&apiKey=ae20b3bd05724e9a8123bcbb6889a569'
+            `http://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=ae20b3bd05724e9a8123bcbb6889a569`
         );
         setArticles((prev) => prev.concat(data.data.articles));    
     }
