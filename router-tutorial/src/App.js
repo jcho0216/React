@@ -6,7 +6,7 @@ import Home from './Home';
 const App = () => {
   return (
     <div>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Home} exact={true}/>
       <Route path="/about" component={About} />
     </div>
   );
