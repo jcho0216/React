@@ -16,6 +16,8 @@ const App = () => {
         </li>
         <li>
           <Link to="/profile/velopert">velopert 프로필</Link>
+        </li>
+        <li>
           <Link to="/profile/gildong">gildong 프로필</Link>
         </li>
       </ul>
