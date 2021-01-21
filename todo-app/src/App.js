@@ -4,7 +4,7 @@ import TodoTemplate from './TodoTemplate';
 const App = () => {
   return (
     <TodoTemplate>
-      Todo앱
+      Todo앱을 만들자
     </TodoTemplate>
   );
 };
