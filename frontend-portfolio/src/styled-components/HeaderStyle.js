@@ -9,7 +9,8 @@ const HeaderStyle = styled.header `
         .logo-image {
             width: 115px;
             height: 99.28px;
-            margin: 30px 115px;
+            margin-left: 190px;
+            margin-top: 10px;
             cursor: pointer;
             &:hover {
                 width: 116px;
@@ -17,13 +18,13 @@ const HeaderStyle = styled.header `
             }
         }
         .nav-menus-container {
-            width: 800px;
+            width: 500px;
             display: flex;
             justify-content: space-around;
             position: relative;
-            left: 30%;
+            left: 55%;
             .nav-menus {
-                margin : 50px 41px;
+                margin : 50px 30px;
                 font-size: 18px;
                 &:hover {
                     text-decoration: underline;
