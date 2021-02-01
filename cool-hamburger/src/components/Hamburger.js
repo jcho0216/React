@@ -3,6 +3,22 @@ import { Link } from "react-router-dom";
 import '../App.scss';
 import gsap from 'gsap';
 
+//images
+import austin from '../images/austin.webp';
+import beijing from '../images/beijing.webp';
+import dallas from '../images/dallas.webp';
+import newyork from '../images/newyork.webp';
+import sanfrancisco from '../images/sanfrancisco.webp';
+
+const cities = [
+  {name: 'Austin', image: austin},
+  {name: 'Beijing', image: beijing},
+  {name: 'Dallas', image: dallas},
+  {name: 'New York', image: newyork},
+  {name: 'Sanfrancisco', image: sanfrancisco}
+]
+
+
 const Hamburger = ({state}) => {
 //for animated dom nodes
   let menu = useRef(null);
@@ -74,7 +90,7 @@ const Hamburger = ({state}) => {
     gsap.from(node, {
       y: 60,
       duration: 1,
-      delay: .2,
+      
       opacity:0,
       ease: 'power3.inOut'
     })
@@ -94,22 +110,76 @@ const Hamburger = ({state}) => {
     })
   }
 
+  const handleCity = city => {
+    gsap.to(cityBackground, {
+      duration: 0,
+      background: `url(${city}) center center`
+    });
+
+    gsap.to(cityBackground, {
+      duration: 0,
+      opacity: 1,
+      ease: 'power3.inOut',
+    });
+
+    gsap.from(cityBackground, {
+      duration: .4,
+      skewY: 2,
+      transformOrigin: 'right top'
+    });
+  }
+
+
+  const handleCityReturn = () => {
+    gsap.to(cityBackground, {
+      duration: .4,
+      opacity: 0
+    })
+  }
+
+  const handleHover = e => {
+    gsap.to(e.target, {
+      duration: .3,
+      y: 3,
+      skewX: 4,
+      ease: 'power3.inOut'
+    })
+  }
+
+  const handleHoverExit = (e) => {
+    gsap.to(e.target, {
+      duration: .3,
+      y: -3,
+      skewX: 0,
+      ease: 'power3.inOut'
+    })
+  }
 
   return (
     <div ref={el => menu = el} className='hamburger-menu'>  
     <div className="menu-secondary-background-color" ref={el => revealMenuBackground = el}></div>
     <div className="menu-layer" ref={el => revealMenu = el}>
-      <div className="menu-city-background">
-
-      </div>
+      <div ref={el => cityBackground = el} className="menu-city-background"></div>
       <div className="container">
           <div className="wrapper">
             <div className="menu-links">
               <nav>
                 <ul>
-                  <li><Link to='/opportunities' ref={el => line1 = el}>Opportunities</Link></li>
-                  <li><Link to='/solutions' ref={el => line2 = el}>Solutions</Link></li>
-                  <li><Link to='/contact-us' ref={el => line3 = el}>Contact us</Link></li>
+                  <li><Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                  to='/opportunities' ref={el => line1 = el}>Opportunities</Link>
+                  </li>
+
+                  <li><Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)} to='/solutions' ref={el => line2 = el}>Solutions
+                  </Link></li>
+
+                  <li><Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)} to='/contact-us' ref={el => line3 = el}>Contact us</Link>
+                  </li>
                 </ul>
               </nav>
               <div className="info" ref={el => info = el}>
@@ -118,11 +188,9 @@ const Hamburger = ({state}) => {
               </div>
               <div className="locations">
                 Locations:
-                <span>Dallas</span>
-                <span>Austin</span>
-                <span>New York</span>
-                <span>San Fransisco</span>
-                <span>Beijing</span>
+                {cities.map(el => (
+                  <span key={el.name} onMouseEnter={()=>{handleCity(el.image)}} onMouseOut={handleCityReturn}>{el.name}</span>
+                ))}
               </div>
             </div>
           </div>
