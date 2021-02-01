@@ -123,7 +123,7 @@ const Hamburger = ({state}) => {
     });
 
     gsap.from(cityBackground, {
-      duration: .4,
+      duration: .3,
       skewY: 2,
       transformOrigin: 'right top'
     });
@@ -132,14 +132,14 @@ const Hamburger = ({state}) => {
 
   const handleCityReturn = () => {
     gsap.to(cityBackground, {
-      duration: .4,
+      duration: 0,
       opacity: 0
     })
   }
 
   const handleHover = e => {
     gsap.to(e.target, {
-      duration: .3,
+      duration: .1,
       y: 3,
       skewX: 4,
       ease: 'power3.inOut'
@@ -148,7 +148,7 @@ const Hamburger = ({state}) => {
 
   const handleHoverExit = (e) => {
     gsap.to(e.target, {
-      duration: .3,
+      duration: .1,
       y: -3,
       skewX: 0,
       ease: 'power3.inOut'
