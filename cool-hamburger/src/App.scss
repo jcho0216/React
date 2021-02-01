@@ -68,8 +68,10 @@ header {
       }
     }
   }
+
   //hamburer menu of
   .hamburger-menu {
+    display: none;
     z-index: 9;
     top: 0;
     bottom: 0;
