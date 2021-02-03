@@ -90,6 +90,7 @@ header {
       height: 100%;
       width: 100%;
       z-index: -1;
+      overflow: hidden;
     }
     .menu-layer {
       position: relative;
@@ -105,9 +106,10 @@ header {
         height: 100%;
         width: 100%;
         opacity: 1;
-        background-size: cover;
+        // background-size: cover;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
-        animation: cameraPan 30s infinite;
+        // animation: cameraPan 30s infinite;
       }
       .wrapper {
         position: relative;
