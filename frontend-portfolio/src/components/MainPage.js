@@ -51,7 +51,7 @@ const MainPage = () => {
                 <div className="texts-container" ref={el => texts = el}>
 
                     {/* <div className="texts-container-inner"> */}
-                    <div className="main-text">Junseo, CHO</div>
+                    <h1 className="main-text">Junseo, CHO</h1>
                     {/* </div> */}
 
                     <div className="texts-container-inner">
@@ -62,7 +62,7 @@ const MainPage = () => {
                     </div>
                     <div className="texts-container-inner">
                         <div className="greeting-text-container">
-                            <p className="greeting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p className="greeting-text">Thank You for viewing my website ^^ </p>
                         </div>
                     </div>
                     
