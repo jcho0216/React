@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import {TweenMax, TimelineLite, Power3} from 'gsap';
+import {TweenMax, TimelineLite, Power3, CustomBounce } from 'gsap';
 import './App.scss';
 //assets
 import imageGirl from './images/girl.webp';
 import imageBoy from './images/boy.webp';
 import arrow from './images/arrow.svg';
+
+
+import Ball from './Ball';
 
 
 
@@ -26,11 +29,11 @@ function App() {
       const headlineFirst = content.children[0].children[0];
       const headlineSecond = headlineFirst.nextSibling;
       const headlineThird = headlineSecond.nextSibling;
-      const contentP = content.children[1];
+
+      const contentP = content.children[1]; 
       const contentButton = content.children[2];
 
-      console.log(headlineFirst);
-      console.log(headlineFirst.children);
+      console.log(content, content.children[1], content.children[2]);
 
       TweenMax.to(app, 0, {css: {visibility: 'visible'}});
       //images animation
@@ -45,13 +48,16 @@ function App() {
         ease: Power3.easeOut,
         delay: .8
       }, .15, 'Start')
-      .from(contentP, 1, {y:20, opacity: 0, ease: Power3.easeOut}, 1.4)
+
+      .from(contentP, 1, {y:20, opacity: 0, ease: Power3.easeOut, }, 1.4)
       .from(contentButton, 1, {y:20, opacity: 0, ease: Power3.easeOut}, 1.6)
+
     }, [tl])
 
 
   return (
     <div className="hero" ref={el => app = el}>
+      <Ball />
       <div className="container">
         <div className="hero-inner">
           <div className="hero-content">
