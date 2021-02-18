@@ -1,7 +1,15 @@
-
+import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
-    <h1>yo</h1>
+    <>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route path='/' exact />
+      </Switch>
+    </Router>
+    </>
   );
 }
 
