@@ -1,1 +1,1 @@
-first time using a styled-components
+using styled-components
