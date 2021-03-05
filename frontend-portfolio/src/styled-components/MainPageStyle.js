@@ -6,7 +6,7 @@ const MainPageStyle = styled.div`
     overflow: hidden;      
     background-color: black;
     width: 100%;
-    height: 900px;
+    height: 90vh;
     .texts-container {
         position: absolute;
         top: 35%;
@@ -61,7 +61,7 @@ const MainPageStyle = styled.div`
                 left: 65%;
                 top: 220px;
                 border-radius: 20px;
-                // overflow: hidden;
+                
             }
         }
 

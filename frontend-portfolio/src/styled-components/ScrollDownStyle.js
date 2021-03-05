@@ -1,12 +1,19 @@
 import Styled from 'styled-components';
 
 const ScrollDownStyle = Styled.div`
-    
-        background-color: green;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        background-color: ;
+        height: 100vh;
 
         h1 {
-            color: white;
+            
         }
+
+
     
 `;
 
