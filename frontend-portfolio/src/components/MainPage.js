@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
 //image import
-import whiteLinePic from "../1_images/white-line.png";
 import mePic from "../1_images/me.jpeg";
 import ausPic from "../1_images/aus.jpg";
 
@@ -54,17 +53,13 @@ const MainPage = () => {
         <S.TextsContainer ref={(el) => (texts = el)}>
           <S.MainText>Junseo, CHO</S.MainText>
           <S.TextsContainerInner>
-            <p className="sub-text">Junior FrontEnd Developer</p>
+            <h3>"Junior FrontEnd Developer"</h3>
           </S.TextsContainerInner>
-            <S.TextsContainerInner>
-            <img src={whiteLinePic} alt="whiteLine" />
-            </S.TextsContainerInner>
           <S.TextsContainerInner>
-          <div className="greeting-text-container">
-              <p className="greeting-text">
-                Thank You for viewing my website ^^{" "}
-              </p>
-            </div>
+            <S.WhiteLine />
+          </S.TextsContainerInner>
+          <S.TextsContainerInner>
+            <p>Welcome To My Portfolio Web Site, Thanks for visiting !_!</p>
           </S.TextsContainerInner>
         </S.TextsContainer>
 
