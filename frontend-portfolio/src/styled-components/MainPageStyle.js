@@ -1,72 +1,65 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const MainPageStyle = styled.div` 
-    .container {
-    visibility: hidden;
-    overflow: hidden;      
-    background-color: black;
-    width: 100%;
-    height: 90vh;
-    .texts-container {
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        color: white;
-        .main-text {
-            margin: 0;
-            font-size: 120px;
-        }
-
-        .texts-container-inner {
-            height: 55px;
-            overflow: hidden;
-                .sub-text {
-                    font-size: 40px;
-                    opacity: 0.7;
-                    margin: 0;
-                }
-            img {
-                margin: 30px 0;
-            }
-            .greeting-text-container{
-                .greeting-text {
-                    color: white;
-                    font-size: 40px;
-                    opacity: 0.8;
-                    margin: 0;
-                }
-            }
-        }       
-    }
-
-    .images {
-        .images-aus {
-            .aus {
-                width: 669px;
-                width: 501px;
-                position: absolute;
-                left: 70%;
-                top: 30px;
-                border-radius: 20px;
-                // overflow: hidden;
-            }
-        }
-
-        .images-me {
-            
-            .me {
-                width: 400px;
-                height: 533.33px;
-                position: absolute;
-                left: 65%;
-                top: 220px;
-                border-radius: 20px;
-                
-            }
-        }
-
-    }
-}
+export const Container = styled.div`
+  visibility: hidden;
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+  height: 90vh;
 `;
 
-export default MainPageStyle;
+
+export const TextsContainer = styled.div`
+  float: left;
+  margin: 100px 170px;
+  padding: 0;
+  color: white;
+`;
+
+export const TextsContainerInner = styled.div`
+  height: 55px;
+  overflow: hidden;
+  p {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  img {
+    margin: 30px 0;
+  }
+`;
+
+
+export const MainText = styled.h1`
+  font-size: 120px;
+  margin: 0;
+`;
+
+
+
+export const Images = styled.div`
+  margin: 0;
+  padding: 0;
+`;
+
+export const AusPic = styled.div`
+  display: flex;
+
+  img {
+    position: relative;
+    right: 10px;
+    width: 700px;
+    width: 550px;
+
+    border-radius: 20px;
+  }
+`;
+
+export const MePic = styled.div`
+  img {
+    width: 400px;
+    height: 533.33px;
+
+    border-radius: 20px;
+  }
+`;

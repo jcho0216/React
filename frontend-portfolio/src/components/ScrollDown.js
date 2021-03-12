@@ -8,6 +8,7 @@ const ScrollDown = () => {
         <ScrollDownStyle>
         <div className="container">
             <h1>ABOUT ME.</h1>
+            <p></p>
         </div>
         </ScrollDownStyle>
         </>

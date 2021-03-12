@@ -1,24 +1,32 @@
-import React from 'react';
-import Logo from '../1_images/logo-black.png';
-import HeaderStyle from '../styled-components/HeaderStyle';
+import React from "react";
+import Logo from "../1_images/logo-black.png";
+// import HeaderStyle from "../styled-components/HeaderStyle";
+import * as S from "../styled-components/HeaderStyle";
 
 const Header = () => {
-    return (
-        <HeaderStyle>
-            <header>
-                <div className="header-container">
-                    <img src={Logo} alt="logo" className="logo-image"/>
-                    <div className="nav-menus-container">
-                        <p className="nav-menus">My Story</p>
-                        <p className="nav-menus">What I Love</p>
-                        <p className="nav-menus">Contact</p>
-                    </div>
-                    
-                </div>
-            </header>
-        </HeaderStyle>
-        
-    );
+  return (
+    // <HeaderStyle>
+    <header>
+      <S.HeaderContainer>
+        <S.LogoImage>
+          <img src={Logo} alt="logo" />
+        </S.LogoImage>
+
+        <S.NavManusContainer>
+          <S.NavMenus>
+            <p className="nav-menus">My Story</p>
+          </S.NavMenus>
+          <S.NavMenus>
+            <p className="nav-menus">What I Love</p>
+          </S.NavMenus>
+          <S.NavMenus>
+            <p className="nav-menus">Contact</p>
+          </S.NavMenus>
+        </S.NavManusContainer>
+      </S.HeaderContainer>
+    </header>
+    // </HeaderStyle>
+  );
 };
 
 export default Header;
