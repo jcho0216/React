@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   visibility: hidden;
   overflow: hidden;
-  background-color: black;
+  background-color: #220210;
   width: 100%;
-  /* height: 90vh; */
+  height: 110vh;
 `;
 
 export const TextsContainer = styled.div`
   float: left;
-  margin: 180px 170px;
+  margin: 220px 170px;
   padding: 0;
-  color: white;
+  color: #c4d5cd;
 `;
 
 export const TextsContainerInner = styled.div`
@@ -22,22 +22,22 @@ export const TextsContainerInner = styled.div`
   h3 {
     font-size: 40px;
     margin: 10px ;
-    opacity: 0.5;
+    color: #c4d5cd;
   }
 
   P {
     margin-left: 10px;
     font-size: 25px;
-    opacity: 0.7;
+    color: #c4d5cd;
     
   }
 `;
 
 export const WhiteLine = styled.div`
-  width: 700px;
+  width: 800px;
   height: 3px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #c4d5cd;
   margin: 30px 0 0 0;
 `;
 
@@ -49,21 +49,19 @@ export const MainText = styled.h1`
 `;
 
 export const Images = styled.div`
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 `;
 
 export const AusPic = styled.div`
   display: flex;
 
-  img {
+  img { 
     position: relative;
     top: 80px;
-    margin-left: 100px;
-    width: 700px;
     width: 550px;
-
     border-radius: 20px;
+    
   }
 `;
 
@@ -71,7 +69,7 @@ export const MePic = styled.div`
   img {
     width: 400px;
     height: 533.33px;
-
+    margin-left: -100px;
     border-radius: 20px;
   }
 `;

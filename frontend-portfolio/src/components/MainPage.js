@@ -74,7 +74,7 @@ const MainPage = () => {
             <img src={mePic} alt="mePic" />
           </S.MePic>
         </S.Images>
-
+      
       </S.Container>
     </>
   );
