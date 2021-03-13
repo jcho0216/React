@@ -59,7 +59,10 @@ const MainPage = () => {
             <S.WhiteLine />
           </S.TextsContainerInner>
           <S.TextsContainerInner>
-            <p>Welcome To My Portfolio Web Site, Thanks for visiting !_!</p>
+            <p>
+              Welcome To My Portfolio Web Site, Thanks for visiting !_!<br/>
+              {/* Please Click The Menus Above - ^_^ */}
+            </p>
           </S.TextsContainerInner>
         </S.TextsContainer>
 
@@ -71,6 +74,7 @@ const MainPage = () => {
             <img src={mePic} alt="mePic" />
           </S.MePic>
         </S.Images>
+
       </S.Container>
     </>
   );

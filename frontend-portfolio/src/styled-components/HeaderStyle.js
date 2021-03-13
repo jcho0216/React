@@ -28,10 +28,12 @@ export const NavManusContainer = styled.div`
 `;
 
 export const NavMenus = styled.div`
-        margin: 30px 30px;
-        font-size: 18px;
-        &:hover {
-          text-decoration: underline;
-          cursor: pointer;
-        }
+  display: flex;
+  align-items: center;
+  margin: 0;
+  &:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    cursor: pointer;
+  }
 `;

@@ -1,7 +1,8 @@
 import React from "react";
 import Logo from "../1_images/logo-black.png";
-// import HeaderStyle from "../styled-components/HeaderStyle";
 import * as S from "../styled-components/HeaderStyle";
+
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,18 +10,37 @@ const Header = () => {
     <header>
       <S.HeaderContainer>
         <S.LogoImage>
-          <img src={Logo} alt="logo" />
+          <Link to="/">
+            <img src={Logo} alt="logo" />
+          </Link>
         </S.LogoImage>
 
         <S.NavManusContainer>
           <S.NavMenus>
-            <p className="nav-menus">My Story</p>
+            <Link
+              to="/AboutME"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              About Me
+            </Link>
           </S.NavMenus>
+
           <S.NavMenus>
-            <p className="nav-menus">What I Love</p>
+            <Link
+              to="/WhatILove"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              What I Love
+            </Link>
           </S.NavMenus>
+
           <S.NavMenus>
-            <p className="nav-menus">Contact</p>
+            <Link
+              to="/Contact"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Contact
+            </Link>
           </S.NavMenus>
         </S.NavManusContainer>
       </S.HeaderContainer>
