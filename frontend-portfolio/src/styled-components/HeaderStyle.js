@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   height: 120px;
   display: flex;
+  
 `;
 
 export const LogoImage = styled.div`
@@ -25,6 +26,7 @@ export const NavManusContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-left: 900px;
+  
 `;
 
 export const NavMenus = styled.div`

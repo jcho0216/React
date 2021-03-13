@@ -5,7 +5,7 @@ export const Container = styled.div`
   overflow: hidden;
   background-color: black;
   width: 100%;
-  height: 90vh;
+  /* height: 90vh; */
 `;
 
 export const TextsContainer = styled.div`
