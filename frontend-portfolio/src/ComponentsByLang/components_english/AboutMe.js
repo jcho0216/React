@@ -1,8 +1,10 @@
 import React from "react";
 import * as S from "../styled-components/AboutMeStyle";
-import MyPicture from "../1_images/MyPicture.png";
+import MyPicture from "../../1_images/MyPicture.png";
 
 const AboutMe = () => {
+  
+
   return (
     <S.Container>
       <S.MyPicture>
@@ -14,7 +16,7 @@ const AboutMe = () => {
         <S.AboutMeText>
           <S.InlineBlock>
             <p>My Name is</p> 
-            <S.MakeTextPinky>&nbsp;Junseo, CHO</S.MakeTextPinky>
+            <S.MakeTextPinky><strong>&nbsp;Junseo, CHO</strong></S.MakeTextPinky>
           </S.InlineBlock>
 
           <p>Born on the 16th of February 2004</p>
@@ -28,8 +30,10 @@ const AboutMe = () => {
         </S.AboutMeText>
         <br /><br/><br/>
         <S.AboutMeText>
-          <p>My Goal Is To Become A</p>
-          <S.MakeTextPinky>World Leading Frontend Developer</S.MakeTextPinky>
+          <p>My favourite thing to do in my</p>
+          <p>free time is coding</p><br/><br/>
+          <p>I Want To Become a </p>
+          <S.MakeTextPinky><strong>World Leading Frontend Developer</strong></S.MakeTextPinky>
         </S.AboutMeText>
       </S.TextContainer>
     </S.Container>

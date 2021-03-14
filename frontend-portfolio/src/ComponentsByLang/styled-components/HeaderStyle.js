@@ -40,7 +40,7 @@ export const NavMenus = styled.div`
   }
 
   img:hover {
-    background-color: yellow;
+    background-color: #868686;
   }
   
 `;

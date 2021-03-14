@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
 //image import
-import mePic from "../1_images/me.jpeg";
-import ausPic from "../1_images/aus.jpg";
+import mePic from "../../1_images/me.jpeg";
+import ausPic from "../../1_images/aus.jpg";
 
 //style import
 // import MainPageStyle from "../styled-components/MainPageStyle";
@@ -53,15 +53,14 @@ const MainPage = () => {
         <S.TextsContainer ref={(el) => (texts = el)}>
           <S.MainText>Junseo, CHO</S.MainText>
           <S.TextsContainerInner>
-            <h3>"Junior FrontEnd Developer"</h3>
+            <h3>"주니어 프론트엔드 개발자"</h3>
           </S.TextsContainerInner>
           <S.TextsContainerInner>
             <S.WhiteLine />
           </S.TextsContainerInner>
           <S.TextsContainerInner>
             <p>
-              Welcome To My Portfolio Web Site, Thanks for visiting !_!<br/>
-              {/* Please Click The Menus Above - ^_^ */}
+              제 포트폴리오 사이트에 오신 것을 환영합니다!<br/>
             </p>
           </S.TextsContainerInner>
         </S.TextsContainer>
