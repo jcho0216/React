@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import * as S from "../styled-components/AboutMeStyle";
 import MyPicture from "../../1_images/MyPicture.png";
+import { gsap ,TweenMax, TimelineLite} from 'gsap';
+
 
 const AboutMe = () => {
+  let MyPictureRef = useRef('null');  
+
+  
+
+
   return (
     <S.Container>
-      <S.MyPicture>
-        <img src={MyPicture} alt="MyPic" />
+      <S.MyPicture className="MyPicture">
+        <img ref={(el)=> (MyPictureRef = el)} src={MyPicture} alt="MyPic" />
       </S.MyPicture>
       <S.TextContainer>
-        <S.AboutMe>About Me.</S.AboutMe>
+        <S.AboutMe>나에 대해서.</S.AboutMe>
         <h3>Hi There 👋</h3>
         <S.AboutMeText>
           <S.InlineBlock>

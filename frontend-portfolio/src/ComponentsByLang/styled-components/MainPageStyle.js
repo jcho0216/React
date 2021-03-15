@@ -23,7 +23,7 @@ export const TextsContainerInner = styled.div`
   margin-top: 10px;
   h3 {
     font-size: 40px;
-    margin: 14px 10px 10px 10px;
+    margin: 17px 10px 10px 10px;
     color: white;
   }
 
