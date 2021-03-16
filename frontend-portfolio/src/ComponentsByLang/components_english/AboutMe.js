@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import * as S from "../styled-components/AboutMeStyle";
 import MyPicture from "../../1_images/MyPicture.png";
+import { TimelineLite } from 'gsap'
 
 const AboutMe = () => {
+
+  let MyPictureRef = useRef(null); 
+  let Container = useRef(null);
+   
+  console.log(Container);
+
+  let tl = new TimelineLite();
+
+  tl.from(MyPictureRef.current, {
+    scrollTrigger: {
+      trigger: Container.current,
+      start: 'bottom center'
+    },
+    y: 44
+  })
+  
+  useEffect(()=> {  
+    console.log(MyPictureRef);
+
+   
+
+  })
+
   
 
   return (
-    <S.Container>
+    <S.Container ref={(el) => (Container = el)}>
       <S.MyPicture>
-        <img src={MyPicture} alt="MyPic" />
+        <img src={MyPicture} alt="MyPic" ref={(el) => MyPictureRef = el}/>
       </S.MyPicture>
       <S.TextContainer>
         <S.AboutMe>About Me.</S.AboutMe>

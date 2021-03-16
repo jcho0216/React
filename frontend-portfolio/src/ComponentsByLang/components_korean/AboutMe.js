@@ -1,19 +1,27 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import * as S from "../styled-components/AboutMeStyle";
 import MyPicture from "../../1_images/MyPicture.png";
 import { gsap ,TweenMax, TimelineLite} from 'gsap';
 
 
 const AboutMe = () => {
-  let MyPictureRef = useRef('null');  
-
+  let MyPictureRef = useRef(null); 
+   
+  console.log(MyPictureRef);
+  let tl = new TimelineLite();
   
+  useEffect(()=> {
+    console.log(MyPictureRef);
+
+    tl.to("MyPicture", {x: 500, duration: 2})
+
+  })
 
 
   return (
     <S.Container>
-      <S.MyPicture className="MyPicture">
-        <img ref={(el)=> (MyPictureRef = el)} src={MyPicture} alt="MyPic" />
+      <S.MyPicture >
+        <img ref={(el)=> (MyPictureRef = el)} src={MyPicture} alt="MyPic" className="MyPicture"/>
       </S.MyPicture>
       <S.TextContainer>
         <S.AboutMe>나에 대해서.</S.AboutMe>
