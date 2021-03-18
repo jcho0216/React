@@ -11,7 +11,7 @@ const App = () => {
         <RightPane />
       </div>
     </SampleProvider>
-  );
+  )
 };
 
 export default App;

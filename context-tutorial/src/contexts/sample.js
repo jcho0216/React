@@ -29,7 +29,12 @@ class SampleProvider extends Component {
     // 현재 컴포넌트의 state 와 actions 객체를 넣은 객체를 만들어서,
     // Provider 의 value 값으로 사용하겠습니다.
     const value = { state, actions };
-    return <Provider value={value}>{this.props.children}</Provider>;
+    return (
+          <Provider value={value}>
+            {this.props.children}
+          </Provider>
+    )
+    
   }
 }
 
