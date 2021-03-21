@@ -1,12 +1,12 @@
-import React from "react";
-import { SampleConsumer } from "../contexts/sample";
+import React from 'react';
+import { useSample } from '../contexts/sample';
 
-const Receives = () => {
+const Receives = ({ value }) => {
   return (
-    <SampleConsumer>
-      {(sample) => <div>현재 설정된 값: {sample.state.value}</div>}
-    </SampleConsumer>
+    <div>
+      현재 설정된 값: { value }
+    </div>
   );
 };
 
-export default Receives;
+export default useSample(Receives);
