@@ -7,7 +7,7 @@ const myContext = React.createContext();
 class MyProvider extends Component {
   state = {
     name: "Junseo",
-    age: 100,
+    age: 18,
     cool: true,
   };
 
@@ -18,6 +18,9 @@ class MyProvider extends Component {
           state: this.state,
           GrowAYearOlder: () => this.setState({
             age: this.state.age + 1
+          }),
+          DecreaseAYearOlder: () => this.setState({
+            age: this.state.age - 1
           })
         }}
       >
@@ -42,9 +45,10 @@ class Person extends Component {
         <myContext.Consumer>
           {(context) => (
             <div>
-              <p>Age = {context.state.age}</p>
-              <p>Name = {context.state.name}</p>
-              <button onClick={context.GrowAYearOlder}>+1</button>
+              <p>나이 = {context.state.age}</p>
+              <p>이름 = {context.state.name}</p>
+              <button onClick={context.GrowAYearOlder}>한살 더 먹기</button>
+              <button onClick={context.DecreaseAYearOlder}>타임머신</button>
             </div>
           )}
         </myContext.Consumer>
