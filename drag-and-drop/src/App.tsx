@@ -87,6 +87,10 @@ const DragAndDrop = (): JSX.Element => {
     }
   }, [handleDragIn, handleDragOut, handleDragOver, handleDrop]);
 
+  const handleFilterFile = useCallback((id: number): void => {
+    // 매개변수로 받은 id와 일치하지 않는지에 따라서 filter 해줍니다.
+    setFiles(files.filter((file: IFileTypes) => file.id !== id));
+  }, [files]);
 
   useEffect(() => {
     initDragEvents();
@@ -124,7 +128,7 @@ const DragAndDrop = (): JSX.Element => {
         return (
           <div key={id}>
             <div>{name}</div>
-            <div className="DragDrop-Files-Filter">x</div>
+            <div className="DragDrop-Files-Filter" onClick={() => handleFilterFile(id)}>x</div>
           </div>
         )
       })}
