@@ -28,6 +28,7 @@ const MainPage = () => {
     const me = images.lastElementChild;
 
     TweenMax.to(app, 0, { css: { visibility: "visible" } });
+    
     tl.from(aus, 1.2, { y: 1000, ease: Power3.easeOut }, "Start")
       .from(aus.firstElementChild, 2, { scale: 1.6, ease: Power3.easeOut }, 0.3)
       .from(me, 1.2, { y: 1000, ease: Power3.easeOut }, 0.4)

@@ -2,8 +2,18 @@ import React, { useRef, useEffect } from "react";
 import * as S from "../styled-components/AboutMeStyle";
 import MyPicture from "../../1_images/MyPicture.png";
 import { TimelineLite } from 'gsap'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutMe = () => {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 2000
+    });
+    Aos.refresh();
+
+  },[])
 
   let MyPictureRef = useRef(null); 
   let Container = useRef(null);
@@ -32,7 +42,8 @@ const AboutMe = () => {
   return (
     <S.Container ref={(el) => (Container = el)}>
       <S.MyPicture>
-        <img src={MyPicture} alt="MyPic" ref={(el) => MyPictureRef = el}/>
+        <img src={MyPicture} alt="MyPic" ref={(el) => MyPictureRef = el} data-aos="fade-up"
+     data-aos-anchor-placement="top-center"></img>
       </S.MyPicture>
       <S.TextContainer>
         <S.AboutMe>About Me.</S.AboutMe>
