@@ -40,7 +40,7 @@ export const NavMenus = styled.div`
   }
 
   img:hover {
-    background-color: #868686;
+    background-color: pink;
   }
   
 `;

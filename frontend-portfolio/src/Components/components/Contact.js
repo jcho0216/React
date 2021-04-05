@@ -1,6 +1,8 @@
-import React from "react";
-import emailjs, { sendForm } from "emailjs-com";
+import React, { useEffect } from "react";
+import emailjs from "emailjs-com";
 import * as S from "../styled-components/ContactStyle";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Register = () => {
   const sendMail = (e) => {
@@ -23,10 +25,17 @@ const Register = () => {
       );
   };
 
+  useEffect(() => {
+    Aos.init({
+        duration: 1000
+    });
+  })
+
   return (
     <S.Container>
-      <S.H1>Contact Me.</S.H1>
-      <S.Form onSubmit={sendMail}>
+      <S.H1 data-aos="fade-up"><h1>Contact Me.</h1></S.H1>
+      <S.Line />
+      <S.Form onSubmit={sendMail} data-aos="fade-up">
         <S.InputContainer>
           <S.Input type="hidden" name="contact_number" />
           <label>Name</label>
@@ -35,7 +44,7 @@ const Register = () => {
           <S.Input type="email" name="user_email" />
           <label>Message</label>
           <S.TextArea name="message"/>
-          <S.Input type="submit" value="Send" />
+          <S.Submit type="submit" value="Send" />
         </S.InputContainer>
       </S.Form>
     </S.Container>
