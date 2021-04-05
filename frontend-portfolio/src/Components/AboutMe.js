@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import * as S from "../styled-components/AboutMeStyle";
-import MyPicture from "../../1_images/MyPicture.png";
+import MyPicture from "../1_images/MyPicture.png";
 import { TimelineLite } from 'gsap'
 import Aos from 'aos';
 import 'aos/dist/aos.css';

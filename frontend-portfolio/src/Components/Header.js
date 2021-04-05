@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Logo from "../../1_images/logo-black.png";
+import Logo from "../1_images/logo-black.png";
 import * as S from "../styled-components/HeaderStyle";
-import github from "../../1_images/github.png";
-import instagram from "../../1_images/instagram.png";
+import github from "../1_images/github.png";
+import instagram from "../1_images/instagram.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {

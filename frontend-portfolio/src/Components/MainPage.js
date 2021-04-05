@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
 //image import
-import mePic from "../../1_images/me.jpeg";
-import ausPic from "../../1_images/aus.jpg";
+import mePic from "../1_images/me.jpeg";
+import ausPic from "../1_images/aus.jpg";
 
 //style import
 // import MainPageStyle from "../styled-components/MainPageStyle";

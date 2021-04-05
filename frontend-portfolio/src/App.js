@@ -1,26 +1,19 @@
-import React, { useState } from "react";
-import English from "./ComponentsByLang/components_english/English";
-// import Korean from "./ComponentsByLang/components_korean/Korean";
-// import { Route } from "react-router-dom";
+import React from "react";
+import AboutMe from "./Components/AboutMe";
+import Contact from "./Components/Contact";
+import Header from "./Components/Header";
+import MainPage from "./Components/MainPage";
+import SkillSets from "./Components/SkillSets";
+
 
 function App() {
-  // const [language, SetLanguage] = useState({
-  //   clicked: "false",
-  //   language: "Korean",
-    
-  // });
-
-  // const handleLanguage = () => {
-  //   if (language.clicked === 'false') {
-  //     SetLanguage({ language: "English", clicked: "true"});
-  //   } else if (language.clicked === "true") {
-  //     SetLanguage({ language: "Korean", clicked: "false"});
-  //   }
-  // };
-
   return (
     <>
-      <English />
+      <Header />
+      <MainPage />
+      <AboutMe />
+      <SkillSets />
+      <Contact />
     </>
   );
 }

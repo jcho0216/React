@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import * as S from "../styled-components/SkillSetStyle";
-import gsap from "../../1_images/TechStack/gsap.png";
-import html5 from "../../1_images/TechStack/html5.png";
-import css3 from "../../1_images/TechStack/css3.png";
-import react from "../../1_images/TechStack/react.png";
-import typescript from "../../1_images/TechStack/typescript.png";
-import javascript from "../../1_images/TechStack/javascript.png";
+import gsap from "../1_images/TechStack/gsap.png";
+import html5 from "../1_images/TechStack/html5.png";
+import css3 from "../1_images/TechStack/css3.png";
+import react from "../1_images/TechStack/react.png";
+import typescript from "../1_images/TechStack/typescript.png";
+import javascript from "../1_images/TechStack/javascript.png";
 
 import 'aos/dist/aos.css';
 import Aos from "aos";
