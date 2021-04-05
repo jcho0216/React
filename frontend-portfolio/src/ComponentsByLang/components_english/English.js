@@ -1,7 +1,8 @@
 import AboutMe from './AboutMe';
 import Header from './Header';
 import MainPage from './MainPage';
-import Skillsets from './Skillsets';
+import Skillsets from './SkillSets';
+import Contact from './Contact';
 
 const English = () => {
     return (
@@ -10,6 +11,7 @@ const English = () => {
         <MainPage />
         <AboutMe />
         <Skillsets />
+        <Contact />
         </>
     )
 }

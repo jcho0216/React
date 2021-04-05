@@ -15,7 +15,7 @@ const SkillSet = () => {
 
   useEffect(() => {
     Aos.init({
-      easing: "ease-out-cubic",
+      easing: 'ease-out-back',
       duration: "800",
       delay: "100"
     })

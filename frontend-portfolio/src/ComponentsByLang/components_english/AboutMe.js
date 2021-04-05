@@ -46,29 +46,29 @@ const AboutMe = () => {
      data-aos-anchor-placement="top-center"></img>
       </S.MyPicture>
       <S.TextContainer>
-        <S.AboutMe>About Me.</S.AboutMe>
-        <h3>Hi There 👋</h3>
+        <S.AboutMe data-aos="fade-up">About Me.</S.AboutMe>
+        <h3 data-aos="fade-up">Hi There 👋</h3>
         <S.AboutMeText>
           <S.InlineBlock>
-            <p>My Name is</p> 
-            <S.MakeTextPinky><strong>&nbsp;Junseo, CHO</strong></S.MakeTextPinky>
+            <p data-aos="fade-up">My Name is</p> 
+            <S.MakeTextPinky data-aos="fade-up"><strong>&nbsp;Junseo, CHO</strong></S.MakeTextPinky>
           </S.InlineBlock>
 
-          <p>Born on the 16th of February 2004</p>
-          <p>I am a student in S.Korea</p>
+          <p data-aos="fade-up">Born on the 16th of February 2004</p>
+          <p data-aos="fade-up">I am a student in S.Korea</p>
         </S.AboutMeText>
         <br/><br/><br/>
         <S.AboutMeText>
-          <p>I am a very positive student and love</p>
-          <p>hanging out with my friends. I also</p>
-          <p>love playing sports and video games</p>
+          <p data-aos="fade-up">I am a very positive student and love</p>
+          <p data-aos="fade-up">hanging out with my friends. I also</p>
+          <p data-aos="fade-up">love playing sports and video games</p>
         </S.AboutMeText>
         <br /><br/><br/>
         <S.AboutMeText>
-          <p>My favourite thing to do in my</p>
-          <p>free time is coding</p><br/><br/>
-          <p>I Want To Become a </p>
-          <S.MakeTextPinky><strong>World Leading Frontend Developer</strong></S.MakeTextPinky>
+          <p data-aos="fade-up">My favourite thing to do in my</p>
+          <p data-aos="fade-up">free time is coding</p><br/><br/>
+          <p data-aos="fade-up">I Want To Become a </p>
+          <S.MakeTextPinky data-aos="fade-up"><strong>World Leading Frontend Developer</strong></S.MakeTextPinky>
         </S.AboutMeText>
       </S.TextContainer>
     </S.Container>
