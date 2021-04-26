@@ -7,6 +7,7 @@ import { SetterOrUpdater } from "recoil";
 interface PropTypes {
   id: number;
   contents: string;
+  isCompleted: boolean;
 
   onComplete: (id: number) => void;
   onDelete: (id: number) => void;

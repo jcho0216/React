@@ -1,12 +1,11 @@
 import React, { useCallback } from "react";
 import * as S from './styles';
+import { useRecoilState } from 'recoil';
+import { todoState, ITodoTypes } from '../recoil/todo';
 const TodoList = ():JSX.Element => {
+
     return (
-        <S.TodoList>
-            <S.NoList>
-                Todo가 없습니다. 자유롭게 추가해보세요!
-            </S.NoList>
-        </S.TodoList>
+        <div></div>
     )
 }
 
