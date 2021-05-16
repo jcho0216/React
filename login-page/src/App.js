@@ -28,12 +28,13 @@ function App() {
     }
     else {
       console.log("login - fail")
+      setError("Details do not match")
     }
   }
   
   const LogOut = () => {
     console.log("logout")
-    
+    setUser({name: "", email: ""})
   }
 
 
@@ -42,7 +43,7 @@ function App() {
       {(user.email != "") ? 
       (<div className="welcome">
         <h2>Welcome, <span>{user.name}</span></h2>
-        <button>Log Out</button>
+        <button onClick={LogOut}>Log Out</button>
       </div>)  :
       (<LoginForm Login={Login} error={error}/>)}
     </div>
