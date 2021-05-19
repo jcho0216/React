@@ -20,7 +20,7 @@ export const ToggleTodo = id => ({
 
 
 //초기 상태 선언
-//리듀서의 초기 상태는 꼭 객체타입일 필요 없습닏.
+//리듀서의 초기 상태는 꼭 객체타입일 필요 없습니다.
 
 const initialState = [
     /*
