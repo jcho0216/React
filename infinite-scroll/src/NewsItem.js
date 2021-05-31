@@ -31,7 +31,6 @@ const NewsItemBlock = styled.div`
         white-space: normal;
     }
 
-}
 
 & + & {
     margin-top: 3rem;
